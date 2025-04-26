@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;350;400;500;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #C6A776;
+  --secondary: #2A2356;
+  --dark: #0F0B24;
+  --success: #00B894;
+}
+
+html, body {
+  background-color: var(--dark);
+  color: #F5F5F7;
+  font-family: 'Noto Sans SC', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn {
+  @apply px-8 py-3 rounded-lg font-medium transition-all duration-500;
+}
+
+.btn-primary {
+  @apply bg-primary text-dark hover:bg-opacity-90 hover:shadow-lg;
+}
+
+.btn-outline {
+  @apply border border-light-text text-white hover:border-primary hover:text-primary;
+}
+
+.card {
+  @apply bg-dark-lightest border border-white/10 backdrop-blur-md rounded-xl overflow-hidden;
+}
+
+.icon-rotate {
+  transition: transform 0.5s ease;
+}
+
+.icon-rotate:hover {
+  transform: rotate(45deg);
+}
+
+.section-title {
+  @apply font-serif font-bold text-4xl mb-4;
+}
+
+.section-subtitle {
+  @apply text-light-text max-w-2xl text-center mb-12;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    @apply text-3xl;
+  }
+  
+  .section-subtitle {
+    @apply text-sm;
+  }
+} 
