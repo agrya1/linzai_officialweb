@@ -37,7 +37,6 @@ export default function Home() {
         <title>临在 - 觉醒你的内在宇宙</title>
         <meta name="description" content="在数字时代重建神圣的内在秩序，连接你的本源意识。" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Navbar />
