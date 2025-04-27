@@ -9,9 +9,9 @@ export default function Hero() {
         <Image
           src="/image/Image.png"
           alt="背景图片"
-          fill
-          style={{ objectFit: 'cover' }}
-          className="opacity-70"
+          layout="fill"
+          objectFit="cover"
+          className="opacity-90"
           priority
         />
       </div>

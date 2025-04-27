@@ -17,19 +17,11 @@ export default function GuideSection() {
           </p>
         </div>
         
-        <div className="flex flex-col md:flex-row gap-12 items-center">
+        <div className="flex flex-col md:flex-row gap-12">
           <div className={`w-full md:w-5/12 relative fade-in-up ${sectionVisible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
             <div 
-              className="aspect-square w-full max-w-md mx-auto rounded-xl overflow-hidden relative bg-gradient-radial from-secondary/30 to-dark"
-            >
-              <Image
-                src="/image/灵性指南.png"
-                alt="动态曼陀罗导航"
-                fill
-                style={{ objectFit: 'contain' }}
-                className="opacity-90"
-              />
-            </div>
+              className="w-full h-96 rounded-xl overflow-hidden relative bg-gradient-radial from-secondary/30 to-dark"
+            ></div>
             
             <div className="absolute right-4 -bottom-6 w-16 h-16 rounded-full bg-primary/80 flex items-center justify-center shadow-lg">
               <Image

@@ -27,11 +27,9 @@ export default function ProductSection() {
             description="将脑电波编译成命运代码。结合荣格原型理论的视觉化引擎，助力愿景可视化和心愿显化。"
             bgColor="bg-secondary/20"
             iconSrc="/images/consciousness-purification-icon.svg"
-            imageSrc="/image/临在愿景.jpeg"
             buttonText="探索临在愿景"
             buttonColor="bg-secondary/30"
             buttonBorderColor="border-secondary/30"
-            productUrl="https://vision.linzai.asia"
             index={0}
             isVisible={sectionVisible}
           />
@@ -41,11 +39,9 @@ export default function ProductSection() {
             description="给时间涂上灵魂的颜色。利用色彩心理学原理，通过彩色垂直标签和极简操作进行任务管理。"
             bgColor="bg-primary/20"
             iconSrc="/images/energy-manifestation-icon.svg"
-            imageSrc="/image/临在清单.jpeg"
             buttonText="探索临在清单"
             buttonColor="bg-primary/30"
             buttonBorderColor="border-primary/30"
-            productUrl="https://list.linzai.asia"
             index={1}
             isVisible={sectionVisible}
           />
@@ -55,11 +51,9 @@ export default function ProductSection() {
             description="捕捉情绪的海市蜃楼。帮助人们关注精神生活，记录管理情绪，链接内在声音的轻社交平台。"
             bgColor="bg-success/20"
             iconSrc="/images/presence-tradition-icon.svg"
-            imageSrc="/image/临在心语.jpeg"
             buttonText="探索临在心语"
             buttonColor="bg-success/30"
             buttonBorderColor="border-success/30"
-            productUrl="https://echo.linzai.asia"
             index={2}
             isVisible={sectionVisible}
           />
@@ -69,22 +63,13 @@ export default function ProductSection() {
   );
 }
 
-function ProductCard({ title, description, bgColor, iconSrc, imageSrc, buttonText, buttonColor, buttonBorderColor, productUrl, index, isVisible }) {
+function ProductCard({ title, description, bgColor, iconSrc, buttonText, buttonColor, buttonBorderColor, index, isVisible }) {
   return (
     <div 
       className={`card h-full overflow-hidden flex flex-col fade-in-up ${isVisible ? 'visible' : ''}`}
       style={{ transitionDelay: `${0.2 + index * 0.1}s` }}
     >
-      <div className={`relative h-48 ${bgColor} overflow-hidden`}>
-        {/* 产品图片 */}
-        {imageSrc && (
-          <Image
-            src={imageSrc}
-            alt={title}
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-        )}
+      <div className={`relative h-48 ${bgColor}`}>
         <div className="absolute right-4 top-4 w-12 h-12 rounded-full bg-dark/80 backdrop-blur-sm flex items-center justify-center">
           <Image
             src={iconSrc}
@@ -100,14 +85,9 @@ function ProductCard({ title, description, bgColor, iconSrc, imageSrc, buttonTex
         <p className="text-light-text text-sm mb-6">{description}</p>
         
         <div className="mt-auto">
-          <a 
-            href={productUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`w-full py-3 text-center rounded-lg ${buttonColor} border ${buttonBorderColor} hover:bg-opacity-50 transition-all duration-500 block`}
-          >
+          <button className={`w-full py-3 text-center rounded-lg ${buttonColor} border ${buttonBorderColor} hover:bg-opacity-50 transition-all duration-500`}>
             {buttonText}
-          </a>
+          </button>
         </div>
       </div>
     </div>
